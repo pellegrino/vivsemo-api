@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+package com.vivsemo.api;
+option go_package = "rpc/vivsemoapi";
+
+service Api {
+  rpc GetAllPhotos (google.protobuf.Empty) returns (AllPhotosResponse) {}
+}
+
+message AllPhotosResponse {
+  repeated Photo photos = 1;
+}
+
+message Photo {
+  string title = 1;
+  string description = 2;
+  string url = 3;
+}
