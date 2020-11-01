@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	twirpHandler := vivsemoapi.NewVivsemoApiServer()
+	twirpHandler := vivsemoapi.NewVivsemoAPIServer()
 	// You can use any mux you like - NewHelloWorldServer gives you an http.Handler.
 	mux := http.NewServeMux()
 	// The generated code includes a method, PathPrefix(), which
